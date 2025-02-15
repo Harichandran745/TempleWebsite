@@ -469,6 +469,16 @@ li a{
     margin-top: 10px;
 
 }
+#playButton, #pauseButton {
+    padding: 4px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.5px solid #939393;
+    background-color: transparent;
+    color: #651D20;
+    border-radius: 50px;
+}
+
 
 #customAudioPlayer {
     font-family: "Sofia Sans", Sans-serif;

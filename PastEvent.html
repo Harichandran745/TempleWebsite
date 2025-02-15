@@ -104,16 +104,34 @@
                             </ul>
                         </nav>
                         <section class="custom-sub-section">
-                            <div class="custom-container">
+                            <div class="custom-container d-flex align-items-center">
                                 <div class="custom-column custom-text">
                                     <p class="custom-heading m-0">Om Namo Venkatesaya</p>
                                 </div>
-
-                                <div class="custom-column custom-audio">
-                                    <audio id="customAudioPlayer" controls>
-                                        <source src="media/mix_41s-audio-joiner.com_.mp3" type="audio/mp3">
-                                        Your browser does not support the audio element.
-                                    </audio>
+                            
+                                <div class="ps-2 custom-column custom-audio">
+                                    <audio id="audioPlayer" src="media/mix_41s-audio-joiner.com_.mp3"></audio>
+                                    
+                                    <button id="playButton"><i class="fas fa-play"></i></button>
+                                    <button id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
+                            
+                                    <script>
+                                        var audioPlayer = document.getElementById('audioPlayer');
+                                        var playButton = document.getElementById('playButton');
+                                        var pauseButton = document.getElementById('pauseButton');
+                            
+                                        playButton.onclick = function () {
+                                            audioPlayer.play();
+                                            playButton.style.display = 'none';
+                                            pauseButton.style.display = 'inline-block';
+                                        };
+                            
+                                        pauseButton.onclick = function () {
+                                            audioPlayer.pause();
+                                            pauseButton.style.display = 'none';
+                                            playButton.style.display = 'inline-block';
+                                        };
+                                    </script>
                                 </div>
                             </div>
                         </section>
