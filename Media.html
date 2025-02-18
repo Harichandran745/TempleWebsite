@@ -45,14 +45,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.css"
-        integrity="sha512-UhvuUthI9VM4N3ZJ5o1lZgj2zNtANzr3zyucuZZDy67BO6Ep5+rJN2PST7kPj+fOI7M/7wVeYaSaaAICmIQ4sQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- jQuery Links -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <!-- jQuery -->
@@ -70,7 +63,7 @@
                     <div class="custom-column custom-logo">
                         <div class="custom-widget">
                             <a href="index.html" class="custom-logo-link">
-                                <img class="custom-logo-image" src="images/shivling.png"
+                                <img class="custom-logo-image" src="images/siva-logo.png"
                                     alt="Uvari_Sri_Suyambulingaswami" width="500" height="500">
                             </a>
                         </div>
@@ -92,16 +85,15 @@
                                 <li>
                                     <a href="#">News</a>
                                     <ul class="custom-sub-menu">
-                                        <li><a href="FutureEvent.html">Future Events</a>
-                                        </li>
+                                        <li><a href="FutureEvent.html">Future Events</a></li>
                                         <li><a href="PastEvent.html">Past Events</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="">Gallery</a></li>
+                                <li><a href="Gallery.html">Gallery</a></li>
                                 <li><a href="PlanVisit.html">Plan a Visit</a></li>
                                 <li><a href="https://www.malibuhindutemple.org/volunteers/">Volunteers</a></li>
-                                <li><a href="AboutUs.html">About Us</a></li>
-                                <li><a href="Media.html">Media</a></li>
+                                <li><a href="AboutUs.html">About</a></li>
+                                <li><a href="">Media</a></li>
                                 <li><a href="http://members.malibuhindutemple.org/">Members</a></li>
                             </ul>
                         </nav>
@@ -110,24 +102,25 @@
                                 <div class="custom-column custom-text">
                                     <p class="custom-heading m-0">Om Namo Venkatesaya</p>
                                 </div>
-                            
+
                                 <div class="ps-2 custom-column custom-audio">
                                     <audio id="audioPlayer" src="media/mix_41s-audio-joiner.com_.mp3"></audio>
-                                    
+
                                     <button id="playButton"><i class="fas fa-play"></i></button>
-                                    <button id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
-                            
+                                    <button id="pauseButton" style="display: none;"><i
+                                            class="fas fa-pause"></i></button>
+
                                     <script>
                                         var audioPlayer = document.getElementById('audioPlayer');
                                         var playButton = document.getElementById('playButton');
                                         var pauseButton = document.getElementById('pauseButton');
-                            
+
                                         playButton.onclick = function () {
                                             audioPlayer.play();
                                             playButton.style.display = 'none';
                                             pauseButton.style.display = 'inline-block';
                                         };
-                            
+
                                         pauseButton.onclick = function () {
                                             audioPlayer.pause();
                                             pauseButton.style.display = 'none';
@@ -145,50 +138,268 @@
             </section>
         </header>
         <div class="page-header ">
-            <h5 class="text-center m-0 p-3">Gallery</h5>
+            <h3 class="text-center m-0 p-3">Temple Medias</h3>
         </div>
-        <div class="container gallery_container">
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 popup-gallery">
-                <div class="col gallery_item">
-                    <a href="images/Uvari_Sri_Suyambulingaswami.jpg" title="Uvari_Sri_Suyambulingaswami">
-                        <img src="images/Uvari_Sri_Suyambulingaswami.jpg" alt="Thumbnail 1">
-                    </a>
-                </div>
-                <div class="col gallery_item">
-                    <a href="images/uvari.jpg" title="Image 2">
-                        <img src="images/uvari.jpg" alt="Thumbnail 2">
-                    </a>
-                </div>
-                <div class="col gallery_item">
-                    <a href="images/siva-vahanam.jpg" title="Image 3">
-                        <img src="images/siva-vahanam.jpg" alt="Thumbnail 3">
-                    </a>
-                </div>
-                <div class="col gallery_item">
-                    <a href="images/uvari2.jpg" title="Image 4">
-                        <img src="images/uvari2.jpg" alt="Thumbnail 4">
-                    </a>
-                </div>
-                <div class="col gallery_item">
-                    <a href="images/kovil.jpg" title="Image 1">
-                        <img src="images/kovil.jpg" alt="Thumbnail 1">
-                    </a>
-                </div>
-                <div class="col gallery_item">
-                    <a href="images/horse-vahanam.jpg" title="Image 2">
-                        <img src="images/horse-vahanam.jpg" alt="Thumbnail 2">
-                    </a>
-                </div>
-                <div class="col gallery_item">
-                    <a href="images/uvari1.jpg" title="Image 3">
-                        <img src="images/uvari1.jpg" alt="Thumbnail 3">
-                    </a>
-                </div>
-                <div class="col gallery_item">
-                    <a href="images/Uvari_temple.jpg" title="Image 4">
-                        <img src="images/Uvari_temple.jpg" alt="Thumbnail 4">
-                    </a>
-                </div>
+        <div class="container py-4">
+            <div class="my-3">
+                <a href="#" target="_blank">
+                    <div class="row ">
+                        <div class="col-4">
+                            <iframe width="100%" height="200"
+                            src="https://www.youtube.com/embed/pHgDRJrBY9U"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+
+                        </div>
+
+                        <div class="col-8">
+                            <p>
+                            </p>
+                            <h6>ஆதியானவன் அந்தமானவன் ஆதி அந்தமாகி நின்று … #sivan #ammadevotional #uvari #vijay</h6>
+
+
+                            4,764 views Premiered on 2 Feb 2023
+                            This video is about Aadiyanavan Anthamanavan
+                            #sivasong #tamilsongs #latesttamilsongs #sivan #lordsivan #tamilsongs #ammadevotional
+                            ammadevotional #tamilbhaktipadal #latesttamilsongs #lordsivan #tamilbhaktipadal
+                            Music:Krish
+                            Lyric: Radhakrishnan
+                            Production: krishtrenzmusic
+                            Copyright:#krishtrenzmusic
+                            Add this song to your playlist
+
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="my-3">
+                <a href="#" target="_blank">
+                    <div class="row ">
+                        <div class="col-4">
+                            <iframe width="100%" height="200"
+                            src="https://www.youtube.com/embed/f9ExHVxCUEA"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+
+                        </div>
+
+                        <div class="col-8">
+                            <p>
+                            </p>
+                            <h6>Uvari</h6>
+
+
+                            947 views 15 Jan 2018
+                            Album: Shivja Prajai
+                            Label: Music
+                            Written by: Radhakrishnan
+                            Singer : Ganesh
+
+                            I bring up this awesome audio on occasion of New year 2018. Enjoy watching this wonderful
+                            devotional songs compilation named 'Siva Prajai' dedicated to our beloved Lord Shiva and
+                            Ganesha. We are sure these amazing devotional songs will make more special. Stay blessed! Om
+                            Namah Shivaya!!!
+
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="my-3">
+                <a href="#" target="_blank">
+                    <div class="row ">
+                        <div class="col-4">
+                            <iframe width="100%" height="200"
+                            src="https://www.youtube.com/embed/F_Y5Bibahg8" 
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+
+                        </div>
+
+                        <div class="col-8">
+                            <p>
+                            </p>
+                            <h6>Lord Shiva Tamil Songs - Nama Siva JUKEBOX BHAKTI | KRISH TRENZMUSIC | UVARY</h6>
+
+
+                            3,861 views 11 Jul 2020 #BhakthiSongs #UNNIKRISHNANSONGS #LordShivaSongs
+                            #LordShivaSongs
+                            #BhakthiSongs
+                            #SivuniPatalu #Bhakthi #BhakthiSongs #DevotionalSongs SONGS LIST
+
+                            NAMA SIVA OM NAMA SIVA
+                            #UNNIKRISHNANSONGS
+                            #Kalaiyum Neeye Kathiravan Neeye
+                            ENGUM SIVAMAIYA
+                            UNNAI NINAITHALE
+                            SIVANE UN
+                            SHIVA SIVA SANKARA
+                            ANTHI MALAITH
+                            DEVA SUNDARE
+
+                            Song
+                            ONBATHU KOLUM AND VINAYAGAR HITS
+                            Writers
+                            Krish,
+                            Licensed to YouTube music
+                            KRISH Music Inc., Music Rights Societies
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="my-3">
+                <a href="#" target="_blank">
+                    <div class="row ">
+                        <div class="col-4">
+                            <iframe width="100%" height="200"
+                            src="https://www.youtube.com/embed/j0dYo0i-hJI"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+
+                        </div>
+
+                        <div class="col-8">
+                            <p>
+                            </p>
+                            <h6>Kaalayum Neeye Kathiravan Neeye| காலையும் நீயே கதிரவன் நீயே| Siva Songs | Krish
+                                TrenzMusic</h6>
+
+
+                            3,112 views 19 Jul 2020 #Siva
+                            Kaalayum Neeye Kathiravan Neeye| காலையும் நீயே கதிரவன் நீயே| Siva Songs | Krish TrenzMusic
+                            #Siva Songs
+
+                            Song
+                            Kaalayum Neeye Kathiravan Neigh
+                            Album
+                            Siva Prajai
+                            Licensed to YouTube by
+                            TrenzMusics Inc
+
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="my-3">
+                <a href="#" target="_blank">
+                    <div class="row ">
+                        <div class="col-4">
+                            <iframe width="100%" height="200"
+                            src="https://www.youtube.com/embed/0In7tgujvio"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+
+                        </div>
+
+                        <div class="col-8">
+                            <p>
+                            </p>
+                            <h6>அலை கடல் ஆடி வரும் உவரியிலே மெகா ஹிட் சுயம்புலிங்கசுவாமி பாடல் alai kadal varum -T M
+                                Soundarajan</h6>
+
+
+                            130,351 views 5 May 2020
+                            அலை கடல் ஆடி வரும் உவரியிலே மெகா ஹிட் சுயம்புலிங்கசுவாமி பாடல் alai kadal varum -T M
+                            Soundarajan
+
+                            singer -T.M.soundarajan
+                            பாடியவர் . சௌந்தராஜன்
+
+
+                            music: athoor sathesh
+                            இசை சதீஷ்
+
+
+                            album-uvari suyambu linga swami pamalai
+
+                            studio music and mastered by
+                            james.F.justin
+                            geetham recording studio
+                            nagercoil
+                            and
+                            T.carlose
+                            Edison recordings
+                            chennai
+
+
+                            produced by sivatha S.T.Murugan
+                            தயாரிப்பு ;சிவதா S T .முருகன்
+
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="my-3">
+                <a href="#" target="_blank">
+                    <div class="row ">
+                        <div class="col-4">
+                            <iframe width="100%" height="200"
+                            src="https://www.youtube.com/embed/3MGvxGUqSOs"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+
+                        </div>
+
+                        <div class="col-8">
+                            <p>
+                            </p>
+                            <h6>உன்னை பாட பாட இனிக்குது சிவலிங்கமே மெகா ஹிட் சுயம்புலிங்கசுவாமி பாடல் unnai paada paada
+                                -T M S</h6>
+
+
+                            33,443 views 5 May 2020
+                            உன்னை பாட பாட இனிக்குது சிவலிங்கமே மெகா ஹிட் சுயம்புலிங்கசுவாமி பாடல் unnai paada paada
+                            inikuthu -T M Soundarajan
+
+                            singer -T.M.soundarajan
+                            பாடியவர் . சௌந்தராஜன்
+
+
+                            music: athoor sathesh
+                            இசை சதீஷ்
+
+
+                            album-uvari suyambu linga swami pamalai
+
+                            studio music and mastered by
+                            james.F.justin
+                            geetham recording studio
+                            nagercoil
+                            and
+                            T.carlose
+                            Edison recordings
+                            chennai
+
+
+                            produced by sivatha S.T.Murugan
+                            தயாரிப்பு ;சிவதா S T .முருகன்
+
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="testimonials-container">
@@ -320,27 +531,6 @@
         </footer>
     </div>
     <script src="js/Custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script>
-       $(document).ready(function () {
-            $('.popup-gallery').magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0, 1] 
-                },
-                image: {
-                    titleSrc: function (item) {
-                        return item.el.attr('title') || '';
-                    }
-                },
-                mainClass: 'mfp-fade',
-                removalDelay: 300
-            });
-        });
-    </script>
 </body>
 
 </html>
