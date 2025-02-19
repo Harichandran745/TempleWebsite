@@ -619,6 +619,14 @@ li a{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.valunteer-img{
+    background-color: #FFFFFF;
+    background-image: url(/images/uvari2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
 
 /* / Gallery Styles / */
 .gallery_container {
@@ -1015,3 +1023,81 @@ li a{
     outline: 0;
     box-shadow: none !important;
 }
+
+/* volunteer form */
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .form-input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 10px 5px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-bottom: 2px solid #651D20;
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .form-input:focus + label,
+  .form-input.has-value + label {
+    top: 0;
+    font-size: 12px;
+    color: #651D20;
+  }
+  
+  textarea.form-input {
+    height: 80px;
+    resize: none;
+  }
+  
+  .select-wrapper {
+    position: relative;
+  }
+  
+  .select-wrapper select {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    appearance: none;
+  }
+  
+  .select-wrapper label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .select-wrapper select:focus + label,
+  .select-wrapper select.has-value + label {
+    top: 0;
+    font-size: 12px;
+    color: #651D20;
+  }
+  
