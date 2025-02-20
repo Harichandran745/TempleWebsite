@@ -17,9 +17,6 @@ $(function () {
         $formInput.removeClass("has-value");
       }
     }
-  
-    $(".date").datepicker();
-  
     // Ensure the select box has the correct label behavior
     $(".select-wrapper select").on("change", function () {
       if ($(this).val() !== "none") {
@@ -28,5 +25,21 @@ $(function () {
         $(this).removeClass("has-value");
       }
     });
+  });
+
+  //Initialize the carousel
+  $(document).ready(function () {
+    // Initialize Carousel
+    $('.carousel').carousel({
+      interval: 5000 // Auto-slide every 5 seconds
+    });
+
+    // Responsive Caption Adjustment
+    function adjustCaption() {
+      $('.carousel .carousel-caption').css('zoom', $('.carousel').width() / 1250);
+    }
+
+    adjustCaption();
+    $(window).resize(adjustCaption);
   });
   
