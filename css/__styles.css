@@ -5968,10 +5968,10 @@ body.ua_ie .trx_addons_text_gradient {
     transform-origin: var(--trx-addons-parallax-y-anchor) var(--trx-addons-parallax-x-anchor)
 }
 
-.sc_parallax:not(.trx_addons_parallax_layers_inited),
+/* .sc_parallax:not(.trx_addons_parallax_layers_inited),
 .sc_parallax:not(.trx_addons_parallax_blocks_inited) {
     opacity: 0
-}
+} */
 
 .elementor-editor-active .sc_parallax {
     overflow: visible !important
@@ -12000,6 +12000,9 @@ label.required span.sc_form_field_title:after {
     bottom: 6em
 }
 
+.scroll_to_top_style_default {
+    background: #651d20;
+}
 .sc_layouts_cart_button_wrap .sc_layouts_cart_items_short {
     display: block;
     -webkit-transform: none;
