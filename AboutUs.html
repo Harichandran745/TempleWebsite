@@ -78,7 +78,7 @@
                                 <li>
                                     <a href="#">Services</a>
                                     <ul class="custom-sub-menu">
-                                        <li><a href="https://www.malibuhindutemple.org/pooja-services/">Pooja
+                                        <li><a href="PoojaService.html">Pooja
                                                 Services</a></li>
                                         <li><a href="https://www.malibuhindutemple.org/temple-services/">Temple
                                                 Services</a></li>
@@ -107,28 +107,52 @@
                             
                                 <div class="ps-2 custom-column custom-audio">
                                     <audio id="audioPlayer" src="media/mix_41s-audio-joiner.com_.mp3"></audio>
-                                    
+                                
                                     <button id="playButton"><i class="fas fa-play"></i></button>
                                     <button id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
-                            
+                                
                                     <script>
                                         var audioPlayer = document.getElementById('audioPlayer');
                                         var playButton = document.getElementById('playButton');
                                         var pauseButton = document.getElementById('pauseButton');
-                            
+                                
+                                        // Autoplay after user interaction
+                                        window.onload = function () {
+                                            document.addEventListener('click', function handleUserInteraction() {
+                                                audioPlayer.play().then(() => {
+                                                    console.log("Autoplay started after user interaction.");
+                                                    playButton.style.display = 'none';
+                                                    pauseButton.style.display = 'inline-block';
+                                                }).catch(function (error) {
+                                                    console.log("Autoplay was blocked:", error);
+                                                });
+                                                document.removeEventListener('click', handleUserInteraction);
+                                            });
+                                        };
+                                
+                                        // Play Button
                                         playButton.onclick = function () {
                                             audioPlayer.play();
                                             playButton.style.display = 'none';
                                             pauseButton.style.display = 'inline-block';
                                         };
-                            
+                                
+                                        // Pause Button
                                         pauseButton.onclick = function () {
                                             audioPlayer.pause();
                                             pauseButton.style.display = 'none';
                                             playButton.style.display = 'inline-block';
                                         };
+                                
+                                        // Handle audio end (reset buttons)
+                                        audioPlayer.onended = function () {
+                                            pauseButton.style.display = 'none';
+                                            playButton.style.display = 'inline-block';
+                                        };
                                     </script>
                                 </div>
+                                
+                                
                             </div>
                         </section>
                     </div>
@@ -139,7 +163,7 @@
             </section>
         </header>
         <div class="page-header ">
-            <h5 class="text-center m-0 p-3">About Temple</h5>
+            <h3 class="text-center m-0 p-3">About Temple</h3>
         </div>
         <div class="container">
             <div class="row py-4">
@@ -276,9 +300,8 @@
                 <div class="row">
                     <!-- Logo and About -->
                     <div class="col-md-3 footer-section">
-                        <h5 class="footer-title">About Us</h5>
-                        <p class="footer-text">We provide the best content and services for learning and development.
-                        </p>
+                                <img class="custom-logo-image" src="images/siva-logo.png"
+                                    alt="Uvari_Sri_Suyambulingaswami" width="500" height="500">
                     </div>
 
                     <!-- Quick Links -->
@@ -328,7 +351,7 @@
         </footer>
     </div>
     <script src="js/Custom.js"></script>
-    <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up scroll_to_top_style_default inited show" title="Scroll to top"></a>
+    <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up scroll_to_top_style_default inited text-white" title="Scroll to top"><i class="fa-solid fa-arrow-up"></i></a>
 </body>
 
 </html>

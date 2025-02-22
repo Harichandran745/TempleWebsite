@@ -113,23 +113,45 @@
                             
                                 <div class="ps-2 custom-column custom-audio">
                                     <audio id="audioPlayer" src="media/mix_41s-audio-joiner.com_.mp3"></audio>
-                                    
+                                
                                     <button id="playButton"><i class="fas fa-play"></i></button>
                                     <button id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
-                            
+                                
                                     <script>
                                         var audioPlayer = document.getElementById('audioPlayer');
                                         var playButton = document.getElementById('playButton');
                                         var pauseButton = document.getElementById('pauseButton');
-                            
+                                
+                                        // Autoplay after user interaction
+                                        window.onload = function () {
+                                            document.addEventListener('click', function handleUserInteraction() {
+                                                audioPlayer.play().then(() => {
+                                                    console.log("Autoplay started after user interaction.");
+                                                    playButton.style.display = 'none';
+                                                    pauseButton.style.display = 'inline-block';
+                                                }).catch(function (error) {
+                                                    console.log("Autoplay was blocked:", error);
+                                                });
+                                                document.removeEventListener('click', handleUserInteraction);
+                                            });
+                                        };
+                                
+                                        // Play Button
                                         playButton.onclick = function () {
                                             audioPlayer.play();
                                             playButton.style.display = 'none';
                                             pauseButton.style.display = 'inline-block';
                                         };
-                            
+                                
+                                        // Pause Button
                                         pauseButton.onclick = function () {
                                             audioPlayer.pause();
+                                            pauseButton.style.display = 'none';
+                                            playButton.style.display = 'inline-block';
+                                        };
+                                
+                                        // Handle audio end (reset buttons)
+                                        audioPlayer.onended = function () {
                                             pauseButton.style.display = 'none';
                                             playButton.style.display = 'inline-block';
                                         };

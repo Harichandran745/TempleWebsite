@@ -1331,23 +1331,7 @@ p{
       display: none !important;
     }
   }
-  
-  /* line 22, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */
-  .latest_activites_area .video_activite a {
-    font-size: 70px;
-    color: #fff;
-    position: relative;
-    z-index: 12;
-    width: 150px;
-    height: 150px;
-    background: #3CC78F;
-    text-align: center;
-    line-height: 150px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-  }
-  
+ 
   /* line 34, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */
   .latest_activites_area .video_activite::before {
     position: absolute;
@@ -1524,5 +1508,16 @@ p{
   /* line 133, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
   .make_donation_area .donate_now_btn {
     margin-top: 50px;
+  }
+
+  /* service css */
+
+  .service-card{
+    min-height: 150px;
+  }
+
+  .service-footer {
+    background-color: transparent !important;
+    border: none !important;
   }
   

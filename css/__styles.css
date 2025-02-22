@@ -12011,7 +12011,7 @@ label.required span.sc_form_field_title:after {
 }
 
 .sc_layouts_cart_button_wrap .sc_layouts_cart_widget {
-    display: none
+    display: none;
 }
 
 .sc_layouts_cart_button_wrap .sc_layouts_cart_button_icon {

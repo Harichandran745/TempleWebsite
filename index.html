@@ -4598,121 +4598,126 @@
 			.woocommerce-product-gallery {
 				opacity: 1 !important;
 			}
-
-			
 		</style>
 	</noscript>
 	<style>
 		.custom-nav-menu>li>a {
-				text-decoration: none;
-				color: #ffffff !important;
-				font-size: 18px;
-				padding: 10px 15px;
-				display: inline-block;
-				transition: color 0.3s ease;
+			text-decoration: none;
+			color: #ffffff !important;
+			font-size: 18px;
+			padding: 10px 15px;
+			display: inline-block;
+			transition: color 0.3s ease;
+		}
+
+		/* Carousel Indicators */
+		.carousel-indicators li {
+			display: inline-block;
+			text-indent: 0;
+			cursor: pointer;
+			border: none;
+			border-radius: 50%;
+			background-color: #666;
+			box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+		}
+
+		.carousel-indicators .active {
+			background-color: #fff;
+		}
+
+		/* Carousel Fade Effect */
+		.carousel-fade .carousel-inner .carousel-item {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+
+		.carousel-fade .carousel-inner .active {
+			opacity: 1;
+		}
+
+		/* Carousel Caption at Bottom */
+		/* Center Carousel Caption */
+		.carousel-caption {
+			font-family: "Open Sans", sans-serif;
+			font-size: 2.5em;
+			font-weight: 300;
+			position: absolute;
+			top: 50% !important;
+			/* Center vertically */
+			left: 50% !important;
+			/* Center horizontally */
+			transform: translate(-50%, -50%) !important;
+			/* Adjust from center */
+			text-align: center;
+			color: white;
+			text-shadow: 2px 2px #651D20;
+			width: 50%;
+			animation-delay: 1.5s;
+			animation-duration: 1.5s;
+		}
+
+		.carousel-caption .sub-txt {
+			font-size: 14px !important;
+			margin-top: 10px;
+			color: #f0f0f0;
+			text-shadow: 1px 1px 3px #651D20;
+		}
+
+		/* Responsive Caption for Smaller Devices */
+		@media (max-width: 768px) {
+			.carousel-caption {
+				font-size: 1.2em;
 			}
-			/* Carousel Indicators */
-			.carousel-indicators li {
-      display: inline-block;
-      text-indent: 0;
-      cursor: pointer;
-      border: none;
-      border-radius: 50%;
-      background-color: #666;
-      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    }
 
-    .carousel-indicators .active {
-      background-color: #fff;
-    }
+			.carousel-caption .sub-txt {
+				font-size: 14px;
+			}
+		}
 
-    /* Carousel Fade Effect */
-    .carousel-fade .carousel-inner .carousel-item {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
+		/* Responsive Image */
+		.carousel-image {
+			width: 100%;
+			height: 800px !important;
+			object-fit: cover;
+		}
 
-    .carousel-fade .carousel-inner .active {
-      opacity: 1;
-    }
-	/* Carousel Caption at Bottom */
-/* Center Carousel Caption */
-.carousel-caption {
-  font-family: "Open Sans", sans-serif;
-  font-size: 2.5em;
-  font-weight: 300;
-  position: absolute;
-  top: 50% !important; /* Center vertically */
-  left: 50% !important; /* Center horizontally */
-  transform: translate(-50%, -50%) !important; /* Adjust from center */
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px #651D20;
-  width: 50%;
-  animation-delay: 1.5s;
-  animation-duration: 1.5s;
-}
-.carousel-caption .sub-txt {
-  font-size: 14px !important;
-  margin-top: 10px;
-  color: #f0f0f0;
-  text-shadow: 1px 1px 3px #651D20;
-}
+		/* Medium Devices (Tablets) */
+		@media (max-width: 992px) {
+			.carousel-image {
+				height: 500px;
+			}
+		}
 
-/* Responsive Caption for Smaller Devices */
-@media (max-width: 768px) {
-  .carousel-caption {
-    font-size: 1.2em;
-  }
-  .carousel-caption .sub-txt {
-    font-size: 14px;
-  }
-}
+		/* Small Devices (Phones) */
+		@media (max-width: 768px) {
+			.carousel-image {
+				height: 350px;
+			}
+		}
 
-    /* Responsive Image */
-    .carousel-image {
-  width: 100%;
-  height: 800px !important;
-  object-fit: cover;
-}
+		/* Extra Small Devices */
+		@media (max-width: 576px) {
+			.carousel-image {
+				height: 250px;
+			}
 
-/* Medium Devices (Tablets) */
-@media (max-width: 992px) {
-  .carousel-image {
-    height: 500px;
-  }
-}
-
-/* Small Devices (Phones) */
-@media (max-width: 768px) {
-  .carousel-image {
-    height: 350px;
-  }
-}
-
-/* Extra Small Devices */
-@media (max-width: 576px) {
-  .carousel-image {
-    height: 250px;
-  }
-  .carousel-caption .sub-txt {
-    font-size: 14px;
-  }
-}
-
+			.carousel-caption .sub-txt {
+				font-size: 14px;
+			}
+		}
 	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<!-- Bootstrap JavaScript Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-	crossorigin="anonymous"></script>
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<!-- Bootstrap JavaScript Bundle -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 
-<!-- Font Awesome CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-	integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<meta name="generator"
 		content="Elementor 3.17.3; features: e_dom_optimization, e_optimized_assets_loading, additional_custom_breakpoints; settings: css_print_method-internal, google_font-enabled, font_display-swap">
 	<meta name="generator"
@@ -5366,14 +5371,12 @@
 																		<ul class="sub-menu">
 																			<li id="menu-item-26065"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26065">
-																				<a
-																					href="https://www.malibuhindutemple.org/pooja-services/"><span>Pooja
+																				<a href="PoojaService.html"><span>Pooja
 																						Services</span></a>
 																			</li>
 																			<li id="menu-item-26069"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26069">
-																				<a
-																					href="https://www.malibuhindutemple.org/temple-services/"><span>Temple
+																				<a href="TempleService.html"><span>Temple
 																						Services</span></a>
 																			</li>
 																		</ul>
@@ -5382,21 +5385,14 @@
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28062">
 																		<a href="#"><span>News</span></a>
 																		<ul class="sub-menu">
-																			<li id="menu-item-29165"
-																				class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29165">
-																				<a
-																					href="https://www.malibuhindutemple.org/announcements/"><span>Announcements</span></a>
-																			</li>
 																			<li id="menu-item-30000"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30000">
-																				<a
-																					href="https://www.malibuhindutemple.org/future-event/"><span>Future
+																				<a href="FutureEvent.html"><span>Future
 																						Events</span></a>
 																			</li>
 																			<li id="menu-item-29999"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29999">
-																				<a
-																					href="https://www.malibuhindutemple.org/past-event/"><span>Past
+																				<a href="PastEvent.html"><span>Past
 																						Events</span></a>
 																			</li>
 																		</ul>
@@ -5407,14 +5403,13 @@
 																	</li>
 																	<li id="menu-item-25481"
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25481">
-																		<a
-																			href="https://www.malibuhindutemple.org/plan-a-visit/"><span>Plan
+																		<a href="PlanVisit.html"><span>Plan
 																				a Visit</span></a>
 																	</li>
 																	<li id="menu-item-26466"
 																		class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26466">
 																		<a
-																			href="https://www.malibuhindutemple.org/volunteers/"><span>Volunteers</span></a>
+																			href="Volunteers.html"><span>Volunteers</span></a>
 																	</li>
 																	<li id="menu-item-28899"
 																		class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28899">
@@ -5423,14 +5418,11 @@
 																	</li>
 																	<li id="menu-item-25482"
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25482">
-																		<a
-																			href="https://www.malibuhindutemple.org/food-service/"><span>Food
-																				Service</span></a>
+																		<a href="Media.html"><span>Media</span></a>
 																	</li>
 																	<li id="menu-item-29588"
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29588">
-																		<a
-																			href="http://members.malibuhindutemple.org/"><span>Members</span></a>
+																		<a href=""><span>Members</span></a>
 																	</li>
 																</ul>
 															</nav>
@@ -5715,14 +5707,12 @@
 																		<ul class="sub-menu">
 																			<li id="menu-item-26065"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26065">
-																				<a
-																					href="https://www.malibuhindutemple.org/pooja-services/"><span>Pooja
+																				<a href="PoojaService.html"><span>Pooja
 																						Services</span></a>
 																			</li>
 																			<li id="menu-item-26069"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26069">
-																				<a
-																					href="https://www.malibuhindutemple.org/temple-services/"><span>Temple
+																				<a href="TempleService.html"><span>Temple
 																						Services</span></a>
 																			</li>
 																		</ul>
@@ -5731,21 +5721,14 @@
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28062">
 																		<a href="#"><span>News</span></a>
 																		<ul class="sub-menu">
-																			<li id="menu-item-29165"
-																				class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29165">
-																				<a
-																					href="https://www.malibuhindutemple.org/announcements/"><span>Announcements</span></a>
-																			</li>
 																			<li id="menu-item-30000"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30000">
-																				<a
-																					href="https://www.malibuhindutemple.org/future-event/"><span>Future
+																				<a href="FutureEvent.html"><span>Future
 																						Events</span></a>
 																			</li>
 																			<li id="menu-item-29999"
 																				class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29999">
-																				<a
-																					href="https://www.malibuhindutemple.org/past-event/"><span>Past
+																				<a href="PastEvent.html"><span>Past
 																						Events</span></a>
 																			</li>
 																		</ul>
@@ -5756,14 +5739,13 @@
 																	</li>
 																	<li id="menu-item-25481"
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25481">
-																		<a
-																			href="https://www.malibuhindutemple.org/plan-a-visit/"><span>Plan
+																		<a href="PlanVisit.html"><span>Plan
 																				a Visit</span></a>
 																	</li>
 																	<li id="menu-item-26466"
 																		class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26466">
 																		<a
-																			href="https://www.malibuhindutemple.org/volunteers/"><span>Volunteers</span></a>
+																			href="Volunteers.html"><span>Volunteers</span></a>
 																	</li>
 																	<li id="menu-item-28899"
 																		class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28899">
@@ -5772,14 +5754,11 @@
 																	</li>
 																	<li id="menu-item-25482"
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25482">
-																		<a
-																			href="https://www.malibuhindutemple.org/food-service/"><span>Food
-																				Service</span></a>
+																		<a href="Media.html"><span>Media</span></a>
 																	</li>
 																	<li id="menu-item-29588"
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29588">
-																		<a
-																			href="http://members.malibuhindutemple.org/"><span>Members</span></a>
+																		<a href=""><span>Members</span></a>
 																	</li>
 																</ul>
 															</nav>
@@ -6009,18 +5988,17 @@
 										data-settings='{"submenu_icon":{"value":"<i class=\"fas fa-chevron-down\"></i>","library":""},"full_width":"stretch","layout":"horizontal","toggle":"burger"}'
 										data-widget_type="nav-menu.default">
 
-										<div class="elementor-widget-container" style="display: flex; align-items: center;">
+										<div class="elementor-widget-container"
+											style="display: flex; align-items: center;">
 											<nav class="custom-nav">
 												<ul class="custom-nav-menu">
-													<li><a href="index.html">Home</a></li>
+													<li><a href="">Home</a></li>
 													<li>
-														<a href="#">Services</a>
+														<a href="">Services</a>
 														<ul class="custom-sub-menu">
-															<li><a
-																	href="https://www.malibuhindutemple.org/pooja-services/">Pooja
+															<li><a href="PoojaService.html">Pooja
 																	Services</a></li>
-															<li><a
-																	href="https://www.malibuhindutemple.org/temple-services/">Temple
+															<li><a href="TempleService.html">Temple
 																	Services</a></li>
 														</ul>
 													</li>
@@ -6034,12 +6012,11 @@
 													</li>
 													<li><a href="">Gallery</a></li>
 													<li><a href="PlanVisit.html">Plan a Visit</a></li>
-													<li><a
-															href="Volunteers.html">Volunteers</a>
+													<li><a href="Volunteers.html">Volunteers</a>
 													</li>
 													<li><a href="AboutUs.html">About Us</a></li>
 													<li><a href="Media.html">Media</a></li>
-													<li><a href="http://members.malibuhindutemple.org/">Members</a></li>
+													<li><a href="">Members</a></li>
 												</ul>
 											</nav>
 
@@ -6057,25 +6034,25 @@
 												<ul id="menu-2-06db74b" class="elementor-nav-menu">
 													<li
 														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22827 current_page_item menu-item-22866">
-														<a href="https://www.malibuhindutemple.org/" aria-current="page"
+														<a href="" aria-current="page"
 															class="elementor-item elementor-item-active"
 															tabindex="-1">Home</a>
 													</li>
 													<li
 														class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25741">
-														<a href="#" class="elementor-item elementor-item-anchor"
+														<a href="" class="elementor-item elementor-item-anchor"
 															tabindex="-1">Services</a>
 														<ul class="sub-menu elementor-nav-menu--dropdown">
 															<li
 																class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26065">
-																<a href="https://www.malibuhindutemple.org/pooja-services/"
-																	class="elementor-sub-item" tabindex="-1">Pooja
+																<a href="PoojaService.html" class="elementor-sub-item"
+																	tabindex="-1">Pooja
 																	Services</a>
 															</li>
 															<li
 																class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26069">
-																<a href="https://www.malibuhindutemple.org/temple-services/"
-																	class="elementor-sub-item" tabindex="-1">Temple
+																<a href="TempleService.html" class="elementor-sub-item"
+																	tabindex="-1">Temple
 																	Services</a>
 															</li>
 														</ul>
@@ -6086,21 +6063,15 @@
 															tabindex="-1">News</a>
 														<ul class="sub-menu elementor-nav-menu--dropdown">
 															<li
-																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29165">
-																<a href="https://www.malibuhindutemple.org/announcements/"
-																	class="elementor-sub-item"
-																	tabindex="-1">Announcements</a>
-															</li>
-															<li
 																class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30000">
-																<a href="https://www.malibuhindutemple.org/future-event/"
-																	class="elementor-sub-item" tabindex="-1">Future
+																<a href="FutureEvent.html" class="elementor-sub-item"
+																	tabindex="-1">Future
 																	Events</a>
 															</li>
 															<li
 																class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29999">
-																<a href="https://www.malibuhindutemple.org/past-event/"
-																	class="elementor-sub-item" tabindex="-1">Past
+																<a href="PastEvent.html" class="elementor-sub-item"
+																	tabindex="-1">Past
 																	Events</a>
 															</li>
 														</ul>
@@ -6195,12 +6166,12 @@
 										<ul class="sub-menu">
 											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26065">
-												<a href="https://www.malibuhindutemple.org/pooja-services/"><span>Pooja
+												<a href="PoojaService.html"><span>Pooja
 														Services</span></a>
 											</li>
 											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26069">
-												<a href="https://www.malibuhindutemple.org/temple-services/"><span>Temple
+												<a href="TempleService.html"><span>Temple
 														Services</span></a>
 											</li>
 										</ul>
@@ -6210,18 +6181,13 @@
 										<a href="#"><span>News</span></a>
 										<ul class="sub-menu">
 											<li
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29165">
-												<a
-													href="https://www.malibuhindutemple.org/announcements/"><span>Announcements</span></a>
-											</li>
-											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30000">
-												<a href="https://www.malibuhindutemple.org/future-event/"><span>Future
+												<a href="FutureEvent.html"><span>Future
 														Events</span></a>
 											</li>
 											<li
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29999">
-												<a href="https://www.malibuhindutemple.org/past-event/"><span>Past
+												<a href="PastEvent.html"><span>Past
 														Events</span></a>
 											</li>
 										</ul>
@@ -6230,24 +6196,22 @@
 										<a href="Gallery.html"><span>Gallery</span></a>
 									</li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25481">
-										<a href="https://www.malibuhindutemple.org/plan-a-visit/"><span>Plan a
+										<a href="PlanVisit.html"><span>Plan a
 												Visit</span></a>
 									</li>
 									<li
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26466">
-										<a
-											href="https://www.malibuhindutemple.org/volunteers/"><span>Volunteers</span></a>
+										<a href="Volunteers.html"><span>Volunteers</span></a>
 									</li>
 									<li
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28899">
 										<a href="AboutUs.html"><span>About Us</span></a>
 									</li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25482">
-										<a href="https://www.malibuhindutemple.org/food-service/"><span>Food
-												Service</span></a>
+										<a href="Media.html"><span>Media</span></a>
 									</li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29588">
-										<a href="http://members.malibuhindutemple.org/"><span>Members</span></a>
+										<a href=""><span>Members</span></a>
 									</li>
 								</ul>
 							</nav>
@@ -6279,62 +6243,74 @@
 						<div data-elementor-type="wp-page" data-elementor-id="22827" class="elementor elementor-22827"
 							data-elementor-post-type="page">
 							<section>
-								<div id="featured" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+								<div id="featured" class="carousel slide carousel-fade" data-bs-ride="carousel"
+									data-bs-interval="5000">
 
 									<!-- Carousel Inner -->
 									<div class="carousel-inner">
-								
-									  <!-- Slide 1 -->
-									  <div class="carousel-item active">
-										<img class="carousel-image d-block w-100" src="images/Uvari_Suyambulingaswami_Banner_Overlay.jpg" alt="Slide 1">
-										<div class="carousel-caption animated fadeInUp">
-										  <span>Uvari
-										  Suyambulinga Swamy
-										  <br>Thirukovil</span><br>
-										  <span class="sub-txt">I offer my prayers to Uvari Suyambulinga Swamy, the self-manifested divine 
-											presence and eternal guardian of devotees, residing in the serene coastal temple.</span>
+
+										<!-- Slide 1 -->
+										<div class="carousel-item active">
+											<img class="carousel-image d-block w-100"
+												src="images/Uvari_Suyambulingaswami_Banner_Overlay.jpg" alt="Slide 1">
+											<div class="carousel-caption animated fadeInUp">
+												<span>Uvari
+													Suyambulinga Swamy
+													<br>Thirukovil</span><br>
+												<span class="sub-txt">I offer my prayers to Uvari Suyambulinga Swamy,
+													the self-manifested divine
+													presence and eternal guardian of devotees, residing in the serene
+													coastal temple.</span>
+											</div>
 										</div>
-									  </div>
-								
-									  <!-- Slide 2 -->
-									  <div class="carousel-item">
-										<img class="carousel-image d-block w-100" src="images/Shiva_Lingam_Banner.jpg" alt="Slide 2">
-										<div class="carousel-caption animated fadeInUp">
-											<span>Uvari
-												Suyambulinga Swamy
-												<br>Thirukovil</span><br>
-												<span class="sub-txt">I offer my prayers to Uvari Suyambulinga Swamy, the self-manifested divine 
-													presence and eternal guardian of devotees, residing in the serene coastal temple.</span>
+
+										<!-- Slide 2 -->
+										<div class="carousel-item">
+											<img class="carousel-image d-block w-100"
+												src="images/Shiva_Lingam_Banner.jpg" alt="Slide 2">
+											<div class="carousel-caption animated fadeInUp">
+												<span>Uvari
+													Suyambulinga Swamy
+													<br>Thirukovil</span><br>
+												<span class="sub-txt">I offer my prayers to Uvari Suyambulinga Swamy,
+													the self-manifested divine
+													presence and eternal guardian of devotees, residing in the serene
+													coastal temple.</span>
+											</div>
 										</div>
-									  </div>
-								
-									  <!-- Slide 3 -->
-									  <div class="carousel-item">
-										<img class="carousel-image d-block w-100" src="images/new1.webp" alt="Slide 3">
-										<div class="carousel-caption animated fadeInUp">
-											<span>Uvari
-												Suyambulinga Swamy
-												<br>Thirukovil</span><br>
-												<span class="sub-txt">I offer my prayers to Uvari Suyambulinga Swamy, the self-manifested d
-													ivine presence and eternal guardian of devotees, residing in the serene coastal temple.</span>
+
+										<!-- Slide 3 -->
+										<div class="carousel-item">
+											<img class="carousel-image d-block w-100" src="images/new1.webp"
+												alt="Slide 3">
+											<div class="carousel-caption animated fadeInUp">
+												<span>Uvari
+													Suyambulinga Swamy
+													<br>Thirukovil</span><br>
+												<span class="sub-txt">I offer my prayers to Uvari Suyambulinga Swamy,
+													the self-manifested d
+													ivine presence and eternal guardian of devotees, residing in the
+													serene coastal temple.</span>
+											</div>
 										</div>
-									  </div>
-								
+
 									</div>
-								
+
 									<!-- Previous Button -->
-									<a class="carousel-control-prev" href="#featured" role="button" data-bs-slide="prev">
+									<a class="carousel-control-prev" href="#featured" role="button"
+										data-bs-slide="prev">
 										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 										<span class="sr-only">Previous</span>
-									  </a>
-									
-									  <a class="carousel-control-next" href="#featured" role="button" data-bs-slide="next">
+									</a>
+
+									<a class="carousel-control-next" href="#featured" role="button"
+										data-bs-slide="next">
 										<span class="carousel-control-next-icon" aria-hidden="true"></span>
 										<span class="sr-only">Next</span>
-									  </a>
-								
-								  </div>
-								  
+									</a>
+
+								</div>
+
 							</section>
 							<section
 								class="elementor-section elementor-top-section elementor-element elementor-element-1bddab4 elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
@@ -6666,10 +6642,9 @@
 																<div class="elementor-widget-container">
 																	<div class="elementor-image-box-wrapper">
 																		<figure class="elementor-image-box-img"><a
-																				href="PlanVisit.html"
-																				tabindex="-1"><img loading="lazy"
-																					decoding="async" width="1288"
-																					height="1478"
+																				href="PlanVisit.html" tabindex="-1"><img
+																					loading="lazy" decoding="async"
+																					width="1288" height="1478"
 																					src="images/temple-timing-1.png"
 																					class="attachment-full size-full wp-image-29690"
 																					alt=""
@@ -6723,7 +6698,8 @@
 																					href="https://www.malibuhindutemple.org/donation/">Online
 																					Donation</a></h3>
 																			<p class="elementor-image-box-description">
-																				Please donate generously to the uvari Suyambulingaswami Temple.</p>
+																				Please donate generously to the uvari
+																				Suyambulingaswami Temple.</p>
 																		</div>
 																	</div>
 																</div>
@@ -6770,10 +6746,10 @@
 																<div class="elementor-widget-container">
 																	<div class="elementor-image-box-wrapper">
 																		<figure class="elementor-image-box-img"><a
-																				href="Contacts.html"
-																				target="_blank" tabindex="-1"><img
-																					loading="lazy" decoding="async"
-																					width="512" height="370"
+																				href="Contacts.html" target="_blank"
+																				tabindex="-1"><img loading="lazy"
+																					decoding="async" width="512"
+																					height="370"
 																					src="images/unnamed-7.png"
 																					class="attachment-full size-full wp-image-29950"
 																					alt="contact us"
@@ -6785,7 +6761,8 @@
 																					href="Contacts.html"
 																					target="_blank">Contact Us</a></h3>
 																			<p class="elementor-image-box-description">
-																				Connect with uvari Suyambulingaswami Temple for spiritual
+																				Connect with uvari Suyambulingaswami
+																				Temple for spiritual
 																				guidance.</p>
 																		</div>
 																	</div>
@@ -7144,171 +7121,18 @@
 									</div>
 								</div>
 							</section>
-							<section
-								class="elementor-section elementor-top-section elementor-element elementor-element-67413c3 scheme_dark elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-								data-id="67413c3" data-element_type="section" data-settings="{"
-								background_background":"classic"}"="">
-								<div class="elementor-background-overlay"></div>
-								<div class="elementor-container elementor-column-gap-extended">
-									<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fcf2a89 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-										data-id="fcf2a89" data-element_type="column">
-										<div class="elementor-widget-wrap elementor-element-populated">
-											<div class="elementor-element elementor-element-7b32854 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer"
-												data-id="7b32854" data-element_type="widget"
-												data-widget_type="spacer.default">
-												<div class="elementor-widget-container">
-													<div class="elementor-spacer">
-														<div class="elementor-spacer-inner"></div>
-													</div>
-												</div>
-											</div>
-											<section
-												class="elementor-section elementor-inner-section elementor-element elementor-element-2bf2ea9 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-												data-id="2bf2ea9" data-element_type="section">
-												<div class="elementor-container elementor-column-gap-no">
-													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-26599d0 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-														data-id="26599d0" data-element_type="column">
-														<div class="elementor-widget-wrap elementor-element-populated">
-															<div class="elementor-element elementor-element-23b5c13 sc_fly_static elementor-widget elementor-widget-trx_sc_title"
-																data-id="23b5c13" data-element_type="widget"
-																data-widget_type="trx_sc_title.default">
-																<div class="elementor-widget-container">
-																	<div class="sc_title sc_title_default">
-																		<h2
-																			class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-																			<span
-																				class="sc_item_title_text">Events</span>
-																		</h2>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</section>
-											<section
-												class="elementor-section elementor-inner-section elementor-element elementor-element-7f057b0 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-												data-id="7f057b0" data-element_type="section">
-												<div class="elementor-container elementor-column-gap-no">
-													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-c2544fa sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-														data-id="c2544fa" data-element_type="column">
-														<div class="elementor-widget-wrap elementor-element-populated">
-															<div class="elementor-element elementor-element-c1f1c98 sc_height_tiny sc_fly_static elementor-widget elementor-widget-spacer"
-																data-id="c1f1c98" data-element_type="widget"
-																data-widget_type="spacer.default">
-																<div class="elementor-widget-container">
-																	<div class="elementor-spacer">
-																		<div class="elementor-spacer-inner"></div>
-																	</div>
-																</div>
-															</div>
-															<div class="elementor-element elementor-element-1a69d4a sc_fly_static elementor-widget elementor-widget-trx_sc_events"
-																data-id="1a69d4a" data-element_type="widget"
-																data-widget_type="trx_sc_events.default">
-																<div class="elementor-widget-container">
-																	<div class="sc_events sc_events_classic">
-																		<div class="sc_events_content sc_item_content">
-																			<div
-																				class="sc_events_item sc_item_container post_container with_more">
-
-																				<div class="sc_events_item_content">
-
-																					<div class="sc_events_item_featured"
-																						style="background-image: url(images/11a16448-8956-426c-b356-9944ae9b32c3-840x1181.jpg);">
-																					</div>
-
-																					<div
-																						class="sc_events_item_content_inner">
-
-																						<div
-																							class="sc_events_item_content_inner_top">
-																							<div
-																								class="sc_events_item_meta_categories">
-																								<a href="https://www.malibuhindutemple.org/events/category/program/"
-																									title="View all posts in Program">Program</a>
-																							</div>
-																						</div>
-
-																						<div
-																							class="sc_events_item_content_inner_bottom">
-																							<h4
-																								class="sc_events_item_title">
-																								<a
-																									href="https://www.malibuhindutemple.org/event/masi-magam-theerthavari/">MASI
-																									MAGAM
-																									THEERTHAVARI</a>
-																							</h4>
-																							<div
-																								class="sc_events_item_meta">
-																								<span
-																									class="sc_events_item_meta_item sc_events_item_meta_date">Starting
-																									<span
-																										class="sc_events_item_date sc_events_item_date_start">February
-																										15, 2025</span>
-																									to <span
-																										class="sc_events_item_date sc_events_item_date_end">February
-																										15,
-																										2025</span></span>
-																							</div>
-
-																							<a href="https://www.malibuhindutemple.org/event/masi-magam-theerthavari/"
-																								class="sc_events_item_more_link">
-																								<span
-																									class="link_text">Read
-																									more</span><span
-																									class="link_icon"></span>
-																							</a>
-																						</div>
-																						<a class="sc_events_item_link"
-																							href="https://www.malibuhindutemple.org/event/masi-magam-theerthavari/"></a>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</section>
-											<section
-												class="elementor-section elementor-inner-section elementor-element elementor-element-291ff5c elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static"
-												data-id="291ff5c" data-element_type="section">
-												<div class="elementor-container elementor-column-gap-no">
-													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-a5a6fb2 sc_inner_width_none sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static"
-														data-id="a5a6fb2" data-element_type="column">
-														<div class="elementor-widget-wrap elementor-element-populated">
-															<div class="elementor-element elementor-element-86e6a19 elementor-align-center sc_fly_static elementor-widget elementor-widget-button"
-																data-id="86e6a19" data-element_type="widget"
-																data-widget_type="button.default">
-																<div class="elementor-widget-container">
-																	<div class="elementor-button-wrapper">
-																		<a class="elementor-button elementor-button-link elementor-size-lg"
-																			href="https://www.malibuhindutemple.org/future-event/">
-																			<span
-																				class="elementor-button-content-wrapper">
-																				<span class="elementor-button-text">View
-																					Events</span>
-																			</span>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</section>
-											<div class="elementor-element elementor-element-dd4c0ce sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer"
-												data-id="dd4c0ce" data-element_type="widget"
-												data-widget_type="spacer.default">
-												<div class="elementor-widget-container">
-													<div class="elementor-spacer">
-														<div class="elementor-spacer-inner"></div>
-													</div>
-												</div>
-											</div>
-										</div>
+							<section class="elementor-section" style="z-index: 1;">
+								<div class="container">
+									<div>
+										<iframe width="100%" height="500"
+											src="https://www.youtube.com/embed/F_Y5Bibahg8" frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen>
+										</iframe>
+									</div>
+									<div class="d-flex justify-content-center my-5">
+										<div class="btn btn-primary boxed-btn4 w-25 text-white" role="button"><a
+												class="text-white" href="Media.html">View all media</a></div>
 									</div>
 								</div>
 							</section>
@@ -11358,7 +11182,7 @@
 													</a>
 												</li>
 												<li class="elementor-icon-list-item">
-													<a href="https://www.malibuhindutemple.org/past-event/">
+													<a href="PastEvent.html">
 
 														<span class="elementor-icon-list-text">Past Events</span>
 													</a>
@@ -11377,7 +11201,7 @@
 										<div class="elementor-widget-container">
 											<ul class="elementor-icon-list-items">
 												<li class="elementor-icon-list-item">
-													<a href="https://www.malibuhindutemple.org/gallery/">
+													<a href="Gallery.html">
 
 														<span class="elementor-icon-list-text">Gallery</span>
 													</a>
@@ -11389,13 +11213,13 @@
 													</a>
 												</li>
 												<li class="elementor-icon-list-item">
-													<a href="https://www.malibuhindutemple.org/volunteers/">
+													<a href="Volunteers.html">
 
 														<span class="elementor-icon-list-text">Volunteers</span>
 													</a>
 												</li>
 												<li class="elementor-icon-list-item">
-													<a href="https://www.malibuhindutemple.org/donation/">
+													<a href="Donation.html">
 
 														<span class="elementor-icon-list-text">Donation</span>
 													</a>
@@ -11414,25 +11238,25 @@
 										<div class="elementor-widget-container">
 											<ul class="elementor-icon-list-items">
 												<li class="elementor-icon-list-item">
-													<a href="https://www.malibuhindutemple.org/about-us/">
+													<a href="AboutUs.html">
 
 														<span class="elementor-icon-list-text">About Us</span>
 													</a>
 												</li>
 												<li class="elementor-icon-list-item">
-													<a href="https://www.malibuhindutemple.org/food-service/">
+													<a href="Media.html">
 
-														<span class="elementor-icon-list-text">Food Service</span>
+														<span class="elementor-icon-list-text">Media</span>
 													</a>
 												</li>
 												<li class="elementor-icon-list-item">
-													<a href="http://members.malibuhindutemple.org/" target="_blank">
+													<a href="" target="_blank">
 
 														<span class="elementor-icon-list-text">Members</span>
 													</a>
 												</li>
 												<li class="elementor-icon-list-item">
-													<a href="https://www.malibuhindutemple.org/contacts/">
+													<a href="Contacts.html">
 
 														<span class="elementor-icon-list-text">Contact Us</span>
 													</a>
@@ -12099,21 +11923,21 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script>
 		$(function () {
-  // Force initialize carousel with auto-slide
-  $('#featured').carousel({
-    interval: 5000, // Slide every 5 seconds
-    ride: 'carousel', // Start automatically
-    pause: false // Continue sliding even on hover
-  });
+			// Force initialize carousel with auto-slide
+			$('#featured').carousel({
+				interval: 5000, // Slide every 5 seconds
+				ride: 'carousel', // Start automatically
+				pause: false // Continue sliding even on hover
+			});
 
-  // Responsive Caption Adjustment
-  function adjustCaption() {
-    $('.carousel .carousel-caption').css('zoom', $('.carousel').width() / 1250);
-  }
+			// Responsive Caption Adjustment
+			function adjustCaption() {
+				$('.carousel .carousel-caption').css('zoom', $('.carousel').width() / 1250);
+			}
 
-  adjustCaption();
-  $(window).resize(adjustCaption);
-});
+			adjustCaption();
+			$(window).resize(adjustCaption);
+		});
 
 	</script>
 
