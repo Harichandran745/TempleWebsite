@@ -884,6 +884,7 @@ p{
     right: -25px;
     width: 50%;
     height: 50%;
+    object-fit: cover;
     padding: 5px;
     background-color: #ffffffd6;
     border-radius: 10px;
